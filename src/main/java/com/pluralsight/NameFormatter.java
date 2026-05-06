@@ -4,6 +4,7 @@ public class NameFormatter {
     private NameFormatter(){}
 
     public static String format(String firstName, String lastName){
+        return firstName + " " + lastName;
 
     }
 
@@ -27,6 +28,24 @@ public class NameFormatter {
         }
 
         return line;
+    }
+
+    public static String format(String fullName){
+        String [] parts = fullName.split(" ");
+
+        String prefix = "";
+        String first = "";
+        String middle = "";
+        String last = "";
+        String suffix = "";
+
+        if (fullName.contains(",")){
+            String[] split = fullName.split(",");
+            suffix = split[1].trim();
+            parts = split[0].split(" ");
+        }
+
+        if(parts.legth)
 
 
 
